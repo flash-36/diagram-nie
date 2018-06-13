@@ -5,6 +5,8 @@ import numpy as np
 #Paths
 
 main_dir="/media/ujwal/My files/Work/Non ML/Flowchart/"
+input_dir=main_dir+"Input"
+data_dir=main_dir+"Data"
 
 #Constants
 kernel=np.ones((5,5),np.uint8)
@@ -130,8 +132,8 @@ def match_with_templates(Input,Templates):
 
 
 def main():
-    Input=load_dataset(main_dir+"Input")
-    Data=load_dataset(main_dir+"Data")
+    Input=load_dataset(input_dir)
+    Data=load_dataset(data_dir)
 
     Templates=extract_templates(Data)
     
@@ -160,4 +162,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+
 
